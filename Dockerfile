@@ -18,7 +18,7 @@ RUN wget http://download.osgeo.org/gdal/1.11.2/gdal-1.11.2.tar.gz \
     && make \
     && sudo make install
     
-RUN export GDAL_LIBRARY_PATH = '/home/sue/local/lib/libgdal.so'
+RUN export GDAL_LIBRARY_PATH = '~/local/lib/libgdal.so'
 
 
 CMD ["python"]
