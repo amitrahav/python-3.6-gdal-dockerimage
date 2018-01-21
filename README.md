@@ -8,7 +8,11 @@ it uses:
     * [Gdal](http://www.gdal.org/) - v 1.11.5
     * [GEOS](http://geos.osgeo.org/) - v 3.6.2
 
+it also uses some useful build tools:
+* [awscli]()
+* [docker]()
 
+Designed for building docker images with geo python and pushing it into esc or elastickbeanstalk.
 ## Usage
 ### Local
 pull docker by:
@@ -23,7 +27,7 @@ docker run amitrahav/python-3.6-gdal-dockerimage
 docker CMD is python so you can run your own py code using it.
 ### On Production
 
-you can use it for build processes or inside a Beanstalk app.
+you can use it for build processes or inside a Beanstalk app. or as a docker builder for other images.
 
 ## Build
 this repo is AWS ready.
