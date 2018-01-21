@@ -10,7 +10,7 @@ RUN wget http://download.osgeo.org/gdal/1.11.5/gdal-1.11.5.tar.gz
 RUN tar -xzf gdal-1.11.5.tar.gz
 RUN cd gdal-1.11.5; ./configure; make; make install
 
-
 ENV GDAL_LIBRARY_PATH=/usr/local/lib/libgdal.so
 
-CMD ["python"]
+WORKDIR /app
+CMD ["python manage.py runserver"]
