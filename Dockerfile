@@ -13,4 +13,5 @@ RUN cd gdal-1.11.5; ./configure; make; make install
 ENV GDAL_LIBRARY_PATH=/usr/local/lib/libgdal.so
 
 WORKDIR /app
-CMD ["python manage.py runserver"]
+CMD [  ]
+ENTRYPOINT ["python manage.py runserver"]
