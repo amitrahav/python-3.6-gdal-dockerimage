@@ -5,7 +5,7 @@ RUN apt-get update ; apt-get --assume-yes install curl \
      libproj-dev \
      gdal-bin \
      python-gdal \
-     python3-software-properties \
+     software-properties-common \
      lsb-core
 
 
@@ -22,7 +22,7 @@ ENV GDAL_LIBRARY_PATH=/usr/local/lib/libgdal.so
 #install dependencies for aws login and docker for build
 RUN pip install awscli && aws --version \
     && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - \
-    && add-apt-repository \
+    && apt-get update && add-apt-repository \
        "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
        $(lsb_release -cs) \
        stable \
