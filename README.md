@@ -13,12 +13,12 @@ it uses:
 ### Local
 pull docker by:
 ```
-docker pull amitrahav/python-2.7.13-gdal-dockerimage
+docker pull amitrahav/python-3.6-gdal-dockerimage
 ```
 
 use it within docker file or run it with:
 ```
-docker run amitrahav/python-2.7.13-gdal-dockerimage
+docker run amitrahav/python-3.6-gdal-dockerimage
 ```
 docker CMD is python so you can run your own py code using it.
 ### On Production
