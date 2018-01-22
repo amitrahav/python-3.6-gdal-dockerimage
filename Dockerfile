@@ -13,13 +13,13 @@ RUN apt-get update ; apt-get install -y --no-install-recommends \
     ca-certificates
 
 #install dependencies for aws login and docker for build
-RUN pip install awscli && aws --version
-RUN curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | apt-key add - \
+RUN pip install awscli && aws --version \
+    && curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | apt-key add - \
     && add-apt-repository \
         "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
         $(lsb_release -cs) \
         stable" \
-    && apt-get update && apt-get install docker    
+    && apt-get update && apt-get install  -y --no-install-recommends docker-ce   
 
 RUN wget http://download.osgeo.org/geos/geos-3.6.2.tar.bz2 \
     && tar -xjf geos-3.6.2.tar.bz2 \
@@ -33,5 +33,5 @@ ENV GDAL_LIBRARY_PATH=/usr/local/lib/libgdal.so
 
 
 WORKDIR /var/app
-CMD [  ]
+CMD [ "/bin/bash" ]
 ENTRYPOINT ["python manage.py runserver"]
