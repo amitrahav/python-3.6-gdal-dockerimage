@@ -21,7 +21,7 @@ use it within docker file or run it with:
 ```
 docker run amitrahav/python-3.6-gdal-dockerimage
 ```
-working directory is /var/app, and enrtypoint is `python manage.py runserver` - so it will start the python server with manage.py located at /var/app.
+
 ### On Production
 
 you can use it for build processes or inside a Beanstalk app. 

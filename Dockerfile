@@ -17,7 +17,4 @@ RUN wget http://download.osgeo.org/gdal/1.11.5/gdal-1.11.5.tar.gz \
 
 ENV GDAL_LIBRARY_PATH=/usr/local/lib/libgdal.so
 
-
-WORKDIR /var/app
-CMD [ ]
-ENTRYPOINT ["python manage.py runserver"]
+CMD [ "/bin/bash" ]
